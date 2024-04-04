@@ -8,5 +8,5 @@ RUN herokuish slug generate && \
 FROM gliderlabs/herokuish
 COPY --from=build /app.tar.gz .
 RUN herokuish slug import < /app.tar.gz
-ENTRYPOINT [ "start" ]
+ENTRYPOINT [ "/start" ]
 CMD [ "web" ]
