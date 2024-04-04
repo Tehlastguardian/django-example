@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: python manage.py runserver
+web: gunicorn django_example.wsgi
